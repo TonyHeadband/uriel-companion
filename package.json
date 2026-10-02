@@ -1,0 +1,32 @@
+{
+  "name": "uriel-companion",
+  "private": true,
+  "description": "A desktop chat window for the Uriel family assistant, with a neon character that shows what it is doing",
+  "license": "MIT",
+  "author": "Antonio Frontino",
+  "repository": "github:TonyHeadband/uriel-companion",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview:dev": "vite --open /preview.html",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "tauri": "tauri",
+    "screenshots": "node scripts/screenshots.mjs",
+    "clips": "node scripts/clips.mjs"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "happy-dom": "^15.0.0",
+    "playwright": "^1.48.0",
+    "typescript": "^5.6.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  }
+}

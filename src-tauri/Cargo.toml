@@ -1,0 +1,31 @@
+[package]
+name = "uriel-companion"
+version = "0.1.0"
+edition = "2021"
+description = "A desktop chat window for the Uriel family assistant"
+license = "MIT"
+authors = ["Antonio Frontino"]
+repository = "https://github.com/TonyHeadband/uriel-companion"
+
+[lib]
+name = "uriel_companion_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["net", "io-util", "time", "macros", "rt", "sync"] }
+keyring = { version = "3", features = ["apple-native", "windows-native", "sync-secret-service", "crypto-rust"] }
+sha2 = "0.10"
+base64 = "0.22"
+rand = "0.8"
+url = "2"
+
+[dev-dependencies]
+tauri = { version = "2", features = ["test"] }
